@@ -1,23 +1,2 @@
-﻿@using Feedback.Models
-@model IEnumerable<Review>
-
-<form asp-action="Create" method="post" enctype="multipart/form-data">
-    <input asp-for="ProductName" class="form-control mb-2" placeholder="Product Name" />
-    <span class="text-danger">@Html.ValidationMessageFor(m => m.ProductName)</span>
-
-    <select asp-for="Rating" class="form-control mb-2">
-        <option value="1">1 ★</option>
-        <option value="2">2 ★</option>
-        <option value="3">3 ★</option>
-        <option value="4">4 ★</option>
-        <option value="5">5 ★</option>
-    </select>
-
-    <textarea asp-for="Text" class="form-control mb-2" placeholder="Your review"></textarea>
-
-    <input type="file" name="Image" class="form-control mb-2" />
-
-    <input asp-for="ExternalLink" class="form-control mb-2" placeholder="Product link" />
-
-    <button class="btn btn-primary">Submit</button>
-</form>
+@using Feedback.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

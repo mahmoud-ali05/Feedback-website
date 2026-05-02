@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include=".claude\settings.local.json" />
+  </ItemGroup>
+
 </Project>

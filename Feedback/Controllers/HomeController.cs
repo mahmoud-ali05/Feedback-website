@@ -16,8 +16,8 @@ namespace Feedback.Controllers
 
         public IActionResult Index()
         {
-            List<Review> reviews = new List<Review>();
-            return View(reviews);
+            // Redirect to reviews feed
+            return RedirectToAction("Index", "Reviews");
         }
         public IActionResult Privacy()
         {
