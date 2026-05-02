@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Feedback.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace Feedback.Controllers
 {
     public class HomeController : Controller
@@ -15,9 +16,9 @@ namespace Feedback.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Review> reviews = new List<Review>();
+            return View(reviews);
         }
-
         public IActionResult Privacy()
         {
             return View();

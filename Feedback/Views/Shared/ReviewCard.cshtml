@@ -1,0 +1,36 @@
+﻿@model Feedback.Models.Review
+
+<div class="review-card shadow-sm p-3">
+
+    <img src="@Model.ImageUrl" class="review-img" />
+
+    <h5 class="review-title">@Model.ProductName</h5>
+
+    <!-- Stars -->
+    <div>
+        @for (int i = 1; i <= 5; i++)
+        {
+            if (i <= Model.Rating)
+            {
+                <span>★</span>
+            }
+            else
+            {
+                <span>☆</span>
+            }
+        }
+    </div>
+
+    <p class="review-text">@Model.Text</p>
+
+    <a href="@Model.ExternalLink" target="_blank">View Product</a>
+
+    <div class="d-flex justify-content-between mt-2">
+        <small>@Model.Author - @Model.Date</small>
+
+        <span class="like-btn" data-id="@Model.Id">
+            ❤️ <span class="like-count">@Model.Likes</span>
+        </span>
+    </div>
+
+</div>

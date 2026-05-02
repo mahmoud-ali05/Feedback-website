@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Review>
+
+@foreach (var review in Model)
+{
+    <partial name="_ReviewCard" model="review" />
+}
+@foreach (var review in Model)
+{
+    @Html.Partial("_ReviewCard", review)
+}
