@@ -1,5 +1,7 @@
+wwwroot\css\Account.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\view-starry-night-sky-with-nature-mountains-landscape.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -58,3 +60,5 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\uploads\reviews\62317ac3-4fbf-4fde-89eb-001a457cc58f_duck.jpg
+wwwroot\uploads\reviews\d22ced29-2d9b-4cf4-a79d-0d067c6e5095_duck.jpg
