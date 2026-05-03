@@ -2,28 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Feedback.Data;
 using Feedback.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace Feedback.Services
 {
     public class ReviewService
     {
-        private List<Review> _reviews = new();
         private readonly IWebHostEnvironment _env;
 
-        public ReviewService(IWebHostEnvironment env)
+        private readonly ApplicationDbContext _context;
+
+        public ReviewService(ApplicationDbContext context, IWebHostEnvironment env)
         {
+            _context = context;
             _env = env;
         }
 
-        public IEnumerable<Review> GetAllReviews() => _reviews;
+        public async Task<IEnumerable<Review>> GetAllReviewsAsync()
+        {
+            return await _context.Reviews.Include(r => r.Comments).ToListAsync();
+        }
 
         public async Task AddReview(Review review, IFormFile? imageFile)
         {
             // Set default values
-            review.Id = _reviews.Any() ? _reviews.Max(r => r.Id) + 1 : 1;
             review.Date = DateTime.Now;
 
             // Handle image upload
@@ -40,7 +46,8 @@ namespace Feedback.Services
                 review.ImageUrl = "/uploads/reviews/" + uniqueFileName;
             }
 
-            _reviews.Add(review);
+            _context.Reviews.Add(review);
+            await _context.SaveChangesAsync();
         }
     }
 }

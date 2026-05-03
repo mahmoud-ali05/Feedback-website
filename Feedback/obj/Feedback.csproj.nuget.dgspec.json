@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LOQ\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj": {}
+    "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LOQ\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj": {
+    "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LOQ\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj",
+        "projectUniqueName": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj",
         "projectName": "Feedback",
-        "projectPath": "C:\\Users\\LOQ\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj",
-        "packagesPath": "C:\\Users\\LOQ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LOQ\\Source\\Repos\\Feedback-website\\Feedback\\obj\\",
+        "projectPath": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj",
+        "packagesPath": "C:\\Users\\maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LOQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maged\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,17 +39,29 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.25, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
