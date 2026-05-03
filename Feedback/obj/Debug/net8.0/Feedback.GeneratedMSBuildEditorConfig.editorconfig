@@ -9,73 +9,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Feedback
 build_property.RootNamespace = Feedback
-build_property.ProjectDir = C:\Users\LOQ\Source\Repos\Feedback-website\Feedback\
+build_property.ProjectDir = C:\Users\maged\Source\Repos\Feedback-website\Feedback\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\LOQ\Source\Repos\Feedback-website\Feedback
+build_property.MSBuildProjectDirectory = C:\Users\maged\Source\Repos\Feedback-website\Feedback
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Account/Login.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Account/Register.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Home/Contact.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Home/Index.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Home/Privacy.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Reviews/Create.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Reviews/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Reviews/Feed.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Reviews/Feed.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xGZWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Shared/Error.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Shared/Layout.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Shared/Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Shared/ReviewCard.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Shared/ReviewCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJldmlld0NhcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Shared/_ReviewCard.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Shared/_ReviewCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXZpZXdDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/_ViewImports.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/_ViewStart.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LOQ/Source/Repos/Feedback-website/Feedback/Views/Shared/_Layout.cshtml]
+[C:/Users/maged/Source/Repos/Feedback-website/Feedback/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-b7bf8a0dhx

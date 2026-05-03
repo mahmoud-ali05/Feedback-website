@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Feedback.Models;
+using Feedback.Data;
 using Feedback.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -15,9 +16,9 @@ namespace Feedback.Controllers
             _reviewService = reviewService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var reviews = _reviewService.GetAllReviews();
+            var reviews = await _reviewService.GetAllReviewsAsync();
             return View("Feed", reviews);
         }
 
@@ -32,7 +33,7 @@ namespace Feedback.Controllers
             if (ModelState.IsValid)
             {
                 await _reviewService.AddReview(review, Image);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
             return View(review);
         }
