@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "Hash": "FFDheiQ6ejKbexPTcIxJdg69yb/oBxuzn4mSEMvstKI=",
+=======
+  "Hash": "p2gC1sMDu38RwdIYISZEE/TmicVdv8cuCFIL1Dmet68=",
+>>>>>>> Stashed changes
   "Source": "Feedback",
   "BasePath": "_content/Feedback",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "Feedback\\wwwroot",
       "Source": "Feedback",
+<<<<<<< Updated upstream
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Feedback.styles.css",
       "SourceId": "Feedback",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Feedback.styles.css",
+      "SourceId": "Feedback",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "Feedback.styles.css",
       "AssetKind": "All",
@@ -33,6 +48,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< Updated upstream
       "OriginalItemSpec": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Feedback.styles.css"
     },
     {
@@ -40,6 +56,15 @@
       "SourceId": "Feedback",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Feedback.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Feedback.bundle.scp.css",
+      "SourceId": "Feedback",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "Feedback.bundle.scp.css",
       "AssetKind": "All",
@@ -52,6 +77,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< Updated upstream
       "OriginalItemSpec": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Feedback.bundle.scp.css"
     },
     {
@@ -59,6 +85,34 @@
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Feedback.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\css\\Account.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+      "BasePath": "_content/Feedback",
+      "RelativePath": "css/Account.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Account.css"
+    },
+    {
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\css\\site.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -74,10 +128,17 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\favicon.ico",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\favicon.ico",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -93,10 +154,36 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\js\\site.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\images\\view-starry-night-sky-with-nature-mountains-landscape.jpg",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+      "BasePath": "_content/Feedback",
+      "RelativePath": "images/view-starry-night-sky-with-nature-mountains-landscape.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\view-starry-night-sky-with-nature-mountains-landscape.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\js\\site.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -112,10 +199,17 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -131,10 +225,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -150,10 +251,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -169,10 +277,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -188,10 +303,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -207,10 +329,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -226,10 +355,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -245,10 +381,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -264,10 +407,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -283,10 +433,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -302,10 +459,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -321,10 +485,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -340,10 +511,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -359,10 +537,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -378,10 +563,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -397,10 +589,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -416,10 +615,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -435,10 +641,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -454,10 +667,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -473,10 +693,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -492,10 +719,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -511,10 +745,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -530,10 +771,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -549,10 +797,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -568,10 +823,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -587,10 +849,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -606,10 +875,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -625,10 +901,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -644,10 +927,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -663,10 +953,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -682,10 +979,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -701,10 +1005,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -720,10 +1031,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -739,10 +1057,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -758,10 +1083,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -777,10 +1109,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -796,10 +1135,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -815,10 +1161,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -834,10 +1187,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -853,10 +1213,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -872,10 +1239,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -891,10 +1265,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -910,10 +1291,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -929,10 +1317,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -948,10 +1343,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -967,10 +1369,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -986,10 +1395,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1005,10 +1421,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1024,10 +1447,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1043,10 +1473,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1062,10 +1499,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1081,10 +1525,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1100,10 +1551,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1119,10 +1577,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1138,10 +1603,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1157,10 +1629,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1176,10 +1655,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1195,6 +1681,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\uploads\\reviews\\2b87b6d6-27b0-4ba7-ba42-078e0a9d80a5_2026-04-28T19-16-54.835Z-Screenshot 2024-03-08 185902.png",
       "SourceId": "Feedback",
       "SourceType": "Discovered",
@@ -1218,6 +1705,12 @@
       "SourceId": "Feedback",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\uploads\\reviews\\62317ac3-4fbf-4fde-89eb-001a457cc58f_duck.jpg",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/Feedback",
       "RelativePath": "uploads/reviews/62317ac3-4fbf-4fde-89eb-001a457cc58f_duck.jpg",
       "AssetKind": "All",
@@ -1231,6 +1724,28 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\reviews\\62317ac3-4fbf-4fde-89eb-001a457cc58f_duck.jpg"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "Identity": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\uploads\\reviews\\d22ced29-2d9b-4cf4-a79d-0d067c6e5095_duck.jpg",
+      "SourceId": "Feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\wwwroot\\",
+      "BasePath": "_content/Feedback",
+      "RelativePath": "uploads/reviews/d22ced29-2d9b-4cf4-a79d-0d067c6e5095_duck.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\reviews\\d22ced29-2d9b-4cf4-a79d-0d067c6e5095_duck.jpg"
+>>>>>>> Stashed changes
     }
   ]
 }

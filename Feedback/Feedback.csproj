@@ -8,12 +8,32 @@
 
   <ItemGroup>
     <Compile Remove=".claude\**" />
+    <Compile Remove="Migrations\NewFolder\**" />
+    <Compile Remove="ViewModel\**" />
+    <Compile Remove="Views\NewFolder1\**" />
+    <Compile Remove="Views\NewFolder\**" />
     <Content Remove=".claude\**" />
+    <Content Remove="Migrations\NewFolder\**" />
+    <Content Remove="ViewModel\**" />
+    <Content Remove="Views\NewFolder1\**" />
+    <Content Remove="Views\NewFolder\**" />
     <EmbeddedResource Remove=".claude\**" />
+    <EmbeddedResource Remove="Migrations\NewFolder\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <EmbeddedResource Remove="Views\NewFolder1\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
     <None Remove=".claude\**" />
+    <None Remove="Migrations\NewFolder\**" />
+    <None Remove="ViewModel\**" />
+    <None Remove="Views\NewFolder1\**" />
+    <None Remove="Views\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.25" />
+>>>>>>> Stashed changes
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.25">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -23,6 +43,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+<<<<<<< Updated upstream
+=======
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.23" />
+>>>>>>> Stashed changes
   </ItemGroup>
 
 </Project>

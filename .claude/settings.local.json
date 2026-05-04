@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm \"Migrations\\\\20260504080322_AddUserToReviewAndComment.cs\")",
+      "Bash(rm \"Migrations\\\\20260504080322_AddUserToReviewAndComment.Designer.cs\")"
+    ]
+  }
+}

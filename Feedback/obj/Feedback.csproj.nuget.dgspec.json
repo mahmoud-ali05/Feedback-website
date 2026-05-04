@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\Feedback.csproj",
         "packagesPath": "C:\\Users\\maged\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\maged\\Source\\Repos\\Feedback-website\\Feedback\\obj\\",
+=======
+    "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\Feedback.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\Feedback.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\Feedback.csproj",
+        "projectName": "Feedback",
+        "projectPath": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\Feedback.csproj",
+        "packagesPath": "C:\\Users\\maged\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maged\\source\\repos\\Feedback-website\\Feedback\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +59,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< Updated upstream
+=======
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.25, )"
+            },
+>>>>>>> Stashed changes
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

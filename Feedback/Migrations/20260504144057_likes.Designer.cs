@@ -4,6 +4,7 @@ using Feedback.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Feedback.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260504144057_likes")]
+    partial class likes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,8 +96,6 @@ namespace Feedback.Migrations
                     b.ToTable("Reviews");
                 });
 
-<<<<<<< Updated upstream
-=======
             modelBuilder.Entity("Feedback.Models.ReviewLike", b =>
                 {
                     b.Property<int>("Id")
@@ -321,7 +322,6 @@ namespace Feedback.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
->>>>>>> Stashed changes
             modelBuilder.Entity("Feedback.Models.Comment", b =>
                 {
                     b.HasOne("Feedback.Models.Review", "Review")
@@ -367,8 +367,6 @@ namespace Feedback.Migrations
                     b.Navigation("User");
                 });
 
-<<<<<<< Updated upstream
-=======
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -420,7 +418,6 @@ namespace Feedback.Migrations
                         .IsRequired();
                 });
 
->>>>>>> Stashed changes
             modelBuilder.Entity("Feedback.Models.Review", b =>
                 {
                     b.Navigation("Comments");

@@ -26,7 +26,7 @@
     <a href="@Model.ExternalLink" target="_blank">View Product</a>
 
     <div class="d-flex justify-content-between mt-2">
-        <small>@Model.Author - @Model.Date</small>
+        <small>@(Model.User?.FullName ?? "Unknown") - @Model.Date</small>
 
         <span class="like-btn" data-id="@Model.Id">
             ❤️ <span class="like-count">@Model.Likes</span>

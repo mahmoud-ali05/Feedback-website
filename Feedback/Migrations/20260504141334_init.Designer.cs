@@ -4,6 +4,7 @@ using Feedback.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Feedback.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260504141334_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,32 +94,6 @@ namespace Feedback.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Reviews");
-                });
-
-<<<<<<< Updated upstream
-=======
-            modelBuilder.Entity("Feedback.Models.ReviewLike", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ReviewId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ReviewId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("ReviewLike");
                 });
 
             modelBuilder.Entity("Feedback.Models.Users", b =>
@@ -321,7 +298,6 @@ namespace Feedback.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
->>>>>>> Stashed changes
             modelBuilder.Entity("Feedback.Models.Comment", b =>
                 {
                     b.HasOne("Feedback.Models.Review", "Review")
@@ -348,27 +324,6 @@ namespace Feedback.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Feedback.Models.ReviewLike", b =>
-                {
-                    b.HasOne("Feedback.Models.Review", "Review")
-                        .WithMany("ReviewLikes")
-                        .HasForeignKey("ReviewId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Feedback.Models.Users", "User")
-                        .WithMany("ReviewLikes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Review");
-
-                    b.Navigation("User");
-                });
-
-<<<<<<< Updated upstream
-=======
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -420,17 +375,9 @@ namespace Feedback.Migrations
                         .IsRequired();
                 });
 
->>>>>>> Stashed changes
             modelBuilder.Entity("Feedback.Models.Review", b =>
                 {
                     b.Navigation("Comments");
-
-                    b.Navigation("ReviewLikes");
-                });
-
-            modelBuilder.Entity("Feedback.Models.Users", b =>
-                {
-                    b.Navigation("ReviewLikes");
                 });
 #pragma warning restore 612, 618
         }

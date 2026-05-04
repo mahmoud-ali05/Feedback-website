@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using Feedback.Models
+@inject SignInManager<Users> SignInManager;
+
+
+
+    <ul class="navbar-nav ms-auto">
+        @if(SignInManager.IsSignedIn(User))
+            {
+        <li>
+    <a class="navbar-nav text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
+        </li>
+
+        <li>
+    <a class="navbar-nav text-dark" asp-controller="Reviews" asp-action="Create">Create a Review</a>
+        </li>
+        
+    }
+    else
+    {
+        <li>
+    <a class="navbar-nav text-dark" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
+            <li>
+    <a class="navbar-nav text-dark" asp-controller="Account" asp-action="Register">Register</a>
+        </li>
+        
+    }
+
+    </ul>

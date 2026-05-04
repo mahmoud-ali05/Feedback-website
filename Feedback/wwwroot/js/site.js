@@ -1,16 +1,30 @@
 ﻿document.addEventListener("click", function (e) {
-    if (e.target.closest(".like-btn")) {
+    const btn = e.target.closest(".like-btn");
+    if (!btn) return;
 
-        let btn = e.target.closest(".like-btn");
-        let id = btn.getAttribute("data-id");
+    const id = btn.getAttribute("data-id");
 
-        fetch(`/Reviews/Like/${id}`, {
-            method: "POST"
+    fetch(`/Reviews/Like/${id}`, {
+        method: "POST"
+    })
+        .then(res => {
+
+            if (res.status === 401) {
+                window.location.href = "/Account/Login";
+                return null;
+            }
+
+            if (!res.ok) {
+                console.error("Something went wrong");
+                return null;
+            }
+
+            return res.json();
         })
-            .then(res => res.json())
-            .then(data => {
-                btn.querySelector(".like-count").innerText = data.likes;
-                btn.classList.toggle("liked");
-            });
-    }
+        .then(data => {
+            if (!data) return;
+
+            btn.querySelector(".like-count").innerText = data.likes;
+            btn.classList.toggle("liked");
+        });
 });
