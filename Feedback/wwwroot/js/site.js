@@ -7,10 +7,21 @@
         fetch(`/Reviews/Like/${id}`, {
             method: "POST"
         })
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    if (res.status === 401) {
+                        alert("Please log in to like reviews!");
+                        window.location.href = "/Account/Login";
+                    }
+                    return null;
+                }
+                return res.json();
+            })
             .then(data => {
-                btn.querySelector(".like-count").innerText = data.likes;
-                btn.classList.toggle("liked");
+                if (data && data.likes !== undefined) {
+                    btn.querySelector(".like-count").innerText = data.likes;
+                    btn.classList.toggle("liked");
+                }
             });
     }
 });

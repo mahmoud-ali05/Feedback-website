@@ -7,8 +7,11 @@
     <ul class="navbar-nav ms-auto">
         @if(SignInManager.IsSignedIn(User))
             {
-<li>
+        <li>
     <a class="navbar-nav text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
+        </li>
+        <li>
+    <a class="navbar-nav text-dark" asp-controller="Reviews" asp-action="Create">Create a Review</a>
         </li>
     }
     else

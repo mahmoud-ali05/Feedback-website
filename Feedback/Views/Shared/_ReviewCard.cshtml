@@ -2,7 +2,10 @@
 
 <div class="review-card shadow-sm p-3">
 
-    <img src="@Model.ImageUrl" class="review-img" />
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" class="review-img" />
+    }
 
     <h5 class="review-title">@Model.ProductName</h5>
 
@@ -23,10 +26,13 @@
 
     <p class="review-text">@Model.Text</p>
 
-    <a href="@Model.ExternalLink" target="_blank">View Product</a>
+    @if (!string.IsNullOrEmpty(Model.ExternalLink))
+    {
+        <a href="@Model.ExternalLink" target="_blank">View Product</a>
+    }
 
     <div class="d-flex justify-content-between mt-2">
-        <small>@Model.Author - @Model.Date.ToString("yyyy-MM-dd")</small>
+        <small>@(Model.User?.FullName ?? Model.User?.UserName ?? "Anonymous") - @Model.Date.ToString("yyyy-MM-dd")</small>
 
         <span class="like-btn" data-id="@Model.Id">
             ❤️ <span class="like-count">@Model.Likes</span>

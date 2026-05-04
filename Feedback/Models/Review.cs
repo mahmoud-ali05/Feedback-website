@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using UsersApp.Models;
 
-namespace Feedback.Models   // ⚠️ this MUST match your project
+namespace Feedback.Models
 {
     public class Review
     {
@@ -24,13 +25,13 @@ namespace Feedback.Models   // ⚠️ this MUST match your project
         [Url]
         public string? ExternalLink { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string? Author { get; set; }
+        public string? UserId { get; set; }
+        public Users? User { get; set; }
 
         public DateTime Date { get; set; }
 
         public int Likes { get; set; }
+        public ICollection<ReviewLike> ReviewLikes { get; set; } = new List<ReviewLike>();
 
         public ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UsersApp.Models;
 namespace Feedback.Models
 {
 
@@ -10,9 +11,8 @@ namespace Feedback.Models
         [StringLength(500, MinimumLength = 2, ErrorMessage = "Comment must be between 2 and 500 characters")]
         public string? Text { get; set; }
 
-        [Required(ErrorMessage = "Author name is required")]
-        [StringLength(50, MinimumLength = 2, ErrorMessage = "Author name must be between 2 and 50 characters")]
-        public string? Author { get; set; }
+        public string? UserId { get; set; }
+        public Users? User { get; set; }
 
         [Required]
         public int ReviewId { get; set; }
