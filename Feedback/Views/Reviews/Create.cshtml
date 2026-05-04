@@ -1,25 +1,26 @@
 ﻿@model Review
 
 <form asp-action="Create" method="post" enctype="multipart/form-data">
-    <input asp-for="Author" class="form-control mb-2" placeholder="Your Name" />
-    <span class="text-danger">@Html.ValidationMessageFor(m => m.Author)</span>
-
     <input asp-for="ProductName" class="form-control mb-2" placeholder="Product Name" />
     <span class="text-danger">@Html.ValidationMessageFor(m => m.ProductName)</span>
 
     <select asp-for="Rating" class="form-control mb-2">
+        <option value="">Select Rating</option>
         <option value="1">1 ★</option>
         <option value="2">2 ★</option>
         <option value="3">3 ★</option>
         <option value="4">4 ★</option>
         <option value="5">5 ★</option>
     </select>
+    <span class="text-danger">@Html.ValidationMessageFor(m => m.Rating)</span>
 
     <textarea asp-for="Text" class="form-control mb-2" placeholder="Your review"></textarea>
+    <span class="text-danger">@Html.ValidationMessageFor(m => m.Text)</span>
 
     <input type="file" name="Image" class="form-control mb-2" />
 
     <input asp-for="ExternalLink" class="form-control mb-2" placeholder="Product link" />
+    <span class="text-danger">@Html.ValidationMessageFor(m => m.ExternalLink)</span>
 
     <button class="btn btn-primary">Submit</button>
 </form>
