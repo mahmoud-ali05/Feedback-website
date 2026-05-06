@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<Review>
 <input type="text" class="form-control mb-3" placeholder="Search..." />
-
 @if (!Model.Any())
 {
     <div class="text-center text-muted">
@@ -9,8 +8,10 @@
 }
 else
 {
-    foreach (var review in Model)
-    {
-        @Html.Partial("_ReviewCard", review)
-    }
+    <div class="reviews-grid">
+        @foreach (var review in Model)
+        {
+            @Html.Partial("_ReviewCard", review)
+        }
+    </div>
 }

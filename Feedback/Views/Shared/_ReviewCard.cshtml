@@ -1,42 +1,62 @@
 ﻿@model Review
 
-<div class="review-card shadow-sm p-3">
-
-    @if (!string.IsNullOrEmpty(Model.ImageUrl))
-    {
-        <img src="@Model.ImageUrl" class="review-img" />
-    }
-
-    <h5 class="review-title">@Model.ProductName</h5>
-
-    <!-- Stars -->
-    <div>
-        @for (int i = 1; i <= 5; i++)
+<div class="review-card">
+    <div class="review-img-wrap">
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
         {
-            if (i <= Model.Rating)
-            {
-                <span>★</span>
-            }
-            else
-            {
-                <span>☆</span>
-            }
+            <img src="@Model.ImageUrl" class="review-img" alt="@Model.ProductName" />
         }
+        else
+        {
+            <div class="review-img-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+        }
+        @* @if (!string.IsNullOrEmpty(Model.Category))
+        {
+            <span class="review-badge">@Model.Category</span>
+        } *@
     </div>
 
-    <p class="review-text">@Model.Text</p>
+    <div class="review-body">
+        <h5 class="review-title" title="@Model.ProductName">@Model.ProductName</h5>
 
-    @if (!string.IsNullOrEmpty(Model.ExternalLink))
-    {
-        <a href="@Model.ExternalLink" target="_blank">View Product</a>
-    }
+        <div class="review-stars" aria-label="Rating: @Model.Rating out of 5">
+            @for (int i = 1; i <= 5; i++)
+            {
+                <span class="@(i <= Model.Rating ? "star filled" : "star")">★</span>
+            }
+        </div>
 
-    <div class="d-flex justify-content-between mt-2">
-        <small>@(Model.User?.FullName ?? Model.User?.UserName ?? "Anonymous") - @Model.Date.ToString("yyyy-MM-dd")</small>
+        <p class="review-text">@Model.Text</p>
 
-        <span class="like-btn" data-id="@Model.Id">
-            ❤️ <span class="like-count">@Model.Likes</span>
-        </span>
+        @if (!string.IsNullOrEmpty(Model.ExternalLink))
+        {
+            <a href="@Model.ExternalLink" class="review-link" target="_blank" rel="noopener noreferrer">
+                View Product
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8L8 2M4 2h4v4"/></svg>
+            </a>
+        }
+
+        <div class="review-footer">
+            <div class="reviewer">
+                <div class="reviewer-avatar">
+                    @{
+                        var name = Model.User?.FullName ?? Model.User?.UserName ?? "A";
+                        var initials = string.Concat(name.Split(' ').Take(2).Select(w => w[0])).ToUpper();
+                    }
+                    <span>@initials</span>
+                </div>
+                <div class="reviewer-info">
+                    <span class="reviewer-name">@(Model.User?.FullName ?? Model.User?.UserName ?? "Anonymous")</span>
+                    <span class="reviewer-date">@Model.Date.ToString("MMM d, yyyy")</span>
+                </div>
+            </div>
+
+            <button class="like-btn" data-id="@Model.Id" data-liked="false" aria-label="Like this review">
+                <span class="like-heart">♡</span>
+                <span class="like-count">@Model.Likes</span>
+            </button>
+        </div>
     </div>
-
 </div>

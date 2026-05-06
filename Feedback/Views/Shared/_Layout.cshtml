@@ -5,42 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Ra2yak</title>
     <script type="importmap"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Testing.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ra2yak</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <a class="site-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="brand-dot"></span>Ra2yak
+                </a>
+                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                <div class="nav-links-wrap">
+                    <!-- Left side: main nav links -->
+                    <ul class="nav-links">
+                        <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                    </ul>
+                    <!-- Right side: login/auth links pushed to the right -->
+                    <ul class="nav-links" style="margin-left: auto;">
                         <partial name="_LoginPartial" />
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="page-body">
+        <main role="main" class="main-content pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Ra2yak - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Ra2yak</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-copy">&copy; 2026</span>
+            <span class="footer-sep">·</span>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy" class="footer-link">Privacy Policy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

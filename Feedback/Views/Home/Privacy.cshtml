@@ -1,6 +1,118 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<link rel="stylesheet" href="~/css/privacy.css" asp-append-version="true" />
+
+<div class="privacy-container">
+
+    <header class="privacy-header">
+        <h1>Privacy Policy</h1>
+        <div class="privacy-meta">
+            <span>&#128197; Last updated: May 2025</span>
+            <span>&#128196; Effective: May 1, 2025</span>
+        </div>
+    </header>
+
+    <div class="privacy-intro">
+        Your privacy matters to us. This policy explains what information we collect, how we use it,
+        and the choices you have. We keep things simple and transparent — no legalese labyrinths.
+    </div>
+
+    <!-- 1. Information We Collect -->
+    <div class="privacy-section">
+        <span class="section-number">01 — Collected Data</span>
+        <h3>Information We Collect</h3>
+        <p>We collect information you provide directly when you create an account, fill out a form, or contact us. We may also collect certain data automatically when you use our service.</p>
+        <ul class="privacy-list">
+            <li><strong>Account data</strong> — name, email address, and password (stored hashed)</li>
+            <li><strong>Usage data</strong> — pages visited, features used, and session duration</li>
+            <li><strong>Device data</strong> — browser type, operating system, and IP address</li>
+            <li><strong>Communications</strong> — messages you send us via contact forms or support</li>
+        </ul>
+    </div>
+
+    <!-- 2. How We Use It -->
+    <div class="privacy-section">
+        <span class="section-number">02 — Usage</span>
+        <h3>How We Use Your Information</h3>
+        <p>We use the data we collect solely to operate and improve our service. We do not sell your personal information to third parties.</p>
+        <ul class="privacy-list">
+            <li>Provide, maintain, and improve our services</li>
+            <li>Send transactional emails (account confirmations, password resets)</li>
+            <li>Respond to your questions and support requests</li>
+            <li>Detect and prevent fraudulent or abusive activity</li>
+            <li>Comply with legal obligations</li>
+        </ul>
+    </div>
+
+    <!-- 3. Cookies -->
+    <div class="privacy-section">
+        <span class="section-number">03 — Cookies</span>
+        <h3>Cookies &amp; Tracking</h3>
+        <p>We use essential cookies to keep you signed in and remember your preferences. We also use analytics cookies (e.g. Google Analytics) to understand how people use our site. You can disable cookies in your browser settings at any time.</p>
+        <p>We do not use advertising cookies or share browsing data with ad networks.</p>
+    </div>
+
+    <!-- 4. Sharing -->
+    <div class="privacy-section">
+        <span class="section-number">04 — Sharing</span>
+        <h3>Information Sharing</h3>
+        <p>We only share your data with trusted service providers who help us run the platform (hosting, email delivery, analytics). These partners are contractually required to keep your data secure and confidential.</p>
+        <p>We may disclose information if required by law, court order, or to protect the rights and safety of our users and the public.</p>
+    </div>
+
+    <!-- 5. Data Retention -->
+    <div class="privacy-section">
+        <span class="section-number">05 — Retention</span>
+        <h3>Data Retention</h3>
+        <p>We retain your personal data for as long as your account is active or as needed to provide services. You can request deletion of your account and associated data at any time. Some data may be retained for up to 90 days in backups before being permanently purged.</p>
+    </div>
+
+    <!-- 6. Your Rights -->
+    <div class="privacy-section">
+        <span class="section-number">06 — Your Rights</span>
+        <h3>Your Rights &amp; Choices</h3>
+        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+        <ul class="privacy-list">
+            <li><strong>Access</strong> — request a copy of the data we hold about you</li>
+            <li><strong>Correction</strong> — ask us to fix inaccurate or incomplete information</li>
+            <li><strong>Deletion</strong> — request that we erase your personal data</li>
+            <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
+            <li><strong>Opt-out</strong> — unsubscribe from marketing emails at any time</li>
+        </ul>
+    </div>
+
+    <!-- 7. Security -->
+    <div class="privacy-section">
+        <span class="section-number">07 — Security</span>
+        <h3>Security</h3>
+        <p>We use industry-standard measures including TLS encryption in transit, hashed passwords, and restricted access controls to protect your data. No system is 100% secure, and we encourage you to use a strong, unique password for your account.</p>
+    </div>
+
+    <!-- 8. Children -->
+    <div class="privacy-section">
+        <span class="section-number">08 — Children</span>
+        <h3>Children's Privacy</h3>
+        <p>Our service is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with their data, please contact us immediately and we will remove it.</p>
+    </div>
+
+    <!-- 9. Changes -->
+    <div class="privacy-section">
+        <span class="section-number">09 — Changes</span>
+        <h3>Changes to This Policy</h3>
+        <p>We may update this policy from time to time. When we do, we'll revise the "last updated" date at the top of this page and, for material changes, notify you by email or a prominent notice on the site.</p>
+    </div>
+
+    <!-- 10. Contact -->
+    <div class="privacy-section">
+        <span class="section-number">10 — Contact</span>
+        <h3>Contact Us</h3>
+        <p>If you have any questions about this policy or how we handle your data, we'd love to hear from you.</p>
+        <div class="contact-card">
+            <p>&#128231; Email: <a href="mailto:privacy@yourapp.com">privacy@yourapp.com</a></p>
+            <p>&#127968; Address: 123 Main Street, Your City, Country</p>
+        </div>
+    </div>
+
+</div>
