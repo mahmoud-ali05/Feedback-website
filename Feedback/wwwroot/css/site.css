@@ -513,3 +513,20 @@ body {
         padding: 24px 16px;
     }
 }
+
+.review-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+    .review-card-link:hover .review-card {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+/* Remove the hover from .review-card itself since the link handles it */
+.review-card:hover {
+    transform: none;
+    box-shadow: none;
+}

@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Feedback.Models;
 using Feedback.Data;
 using Feedback.Services;
@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using UsersApp.Models;
 
 namespace Feedback.Controllers
@@ -14,17 +15,79 @@ namespace Feedback.Controllers
     {
         private readonly ReviewService _reviewService;
         private readonly UserManager<Users> _userManager;
+        private readonly ApplicationDbContext _context;
 
-        public ReviewsController(ReviewService reviewService,UserManager<Users> userManager)
+        public ReviewsController(ReviewService reviewService, UserManager<Users> userManager, ApplicationDbContext context)
         {
             _reviewService = reviewService;
             _userManager = userManager;
+            _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
             var reviews = await _reviewService.GetAllReviewsAsync();
             return View("Feed", reviews);
+        }
+
+        // ── Details page ──
+        public async Task<IActionResult> Details(int id)
+        {
+            var review = await _context.Reviews
+                .Include(r => r.User)
+                .Include(r => r.Comments)
+                    .ThenInclude(c => c.User)
+                .FirstOrDefaultAsync(r => r.Id == id);
+
+            if (review == null) return NotFound();
+
+            var vm = new ReviewDetailViewModel
+            {
+                Review = review,
+                NewComment = new CommentViewModel { ReviewId = id }
+            };
+
+            return View(vm);
+        }
+
+        // ── Add comment ──
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> AddComment(CommentViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Reload the review detail page with validation errors
+                var review = await _context.Reviews
+                    .Include(r => r.User)
+                    .Include(r => r.Comments)
+                        .ThenInclude(c => c.User)
+                    .FirstOrDefaultAsync(r => r.Id == vm.ReviewId);
+
+                if (review == null) return NotFound();
+
+                var detailVm = new ReviewDetailViewModel
+                {
+                    Review = review,
+                    NewComment = vm
+                };
+
+                return View("Details", detailVm);
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+
+            var comment = new Comment
+            {
+                Text = vm.Text,
+                ReviewId = vm.ReviewId,
+                UserId = user?.Id
+            };
+
+            _context.Comments.Add(comment);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Details", new { id = vm.ReviewId });
         }
 
         public IActionResult Create()
