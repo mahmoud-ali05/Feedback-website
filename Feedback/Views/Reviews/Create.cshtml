@@ -1,26 +1,50 @@
 ﻿@model Review
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="ra-form-wrap">
 
-<form asp-action="Create" method="post" enctype="multipart/form-data">
-    <input asp-for="ProductName" class="form-control mb-2" placeholder="Product Name" />
-    <span class="text-danger">@Html.ValidationMessageFor(m => m.ProductName)</span>
+    <p class="ra-form-title">Write a Review</p>
+    <p class="ra-form-sub">Share your experience with a product</p>
 
-    <select asp-for="Rating" class="form-control mb-2">
-        <option value="">Select Rating</option>
-        <option value="1">1 ★</option>
-        <option value="2">2 ★</option>
-        <option value="3">3 ★</option>
-        <option value="4">4 ★</option>
-        <option value="5">5 ★</option>
-    </select>
-    <span class="text-danger">@Html.ValidationMessageFor(m => m.Rating)</span>
+    <div class="ra-field">
+        <label class="ra-label" asp-for="ProductName">Product Name</label>
+        <input asp-for="ProductName" class="ra-input" placeholder="e.g. Sony WH-1000XM5" />
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.ProductName)</span>
+    </div>
 
-    <textarea asp-for="Text" class="form-control mb-2" placeholder="Your review"></textarea>
-    <span class="text-danger">@Html.ValidationMessageFor(m => m.Text)</span>
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Rating">Rating</label>
+        <select asp-for="Rating" class="ra-select">
+            <option value="">Select Rating</option>
+            <option value="1">1 ★</option>
+            <option value="2">2 ★★</option>
+            <option value="3">3 ★★★</option>
+            <option value="4">4 ★★★★</option>
+            <option value="5">5 ★★★★★</option>
+        </select>
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.Rating)</span>
+    </div>
 
-    <input type="file" name="Image" class="form-control mb-2" />
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Text">Your Review</label>
+        <textarea asp-for="Text" class="ra-textarea" placeholder="What did you think? Be honest!"></textarea>
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.Text)</span>
+    </div>
 
-    <input asp-for="ExternalLink" class="form-control mb-2" placeholder="Product link" />
-    <span class="text-danger">@Html.ValidationMessageFor(m => m.ExternalLink)</span>
+    <div class="ra-field">
+        <label class="ra-label">Product Image</label>
+        <label class="ra-file-label">
+            <span class="ra-file-icon">🖼</span>
+            <span>Upload a photo (optional)</span>
+            <input type="file" name="Image" accept="image/*" />
+        </label>
+    </div>
 
-    <button class="btn btn-primary">Submit</button>
+    <div class="ra-field">
+        <label class="ra-label" asp-for="ExternalLink">Product Link</label>
+        <input asp-for="ExternalLink" class="ra-input" placeholder="https://example.com/product" />
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.ExternalLink)</span>
+    </div>
+
+    <hr class="ra-divider" />
+    <button type="submit" class="ra-submit">Submit Review</button>
+
 </form>
