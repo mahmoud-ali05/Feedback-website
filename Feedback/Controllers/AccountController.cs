@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UsersApp.Models;
 using UsersApp.ViewModels;
@@ -14,6 +15,20 @@ namespace UsersApp.Controllers
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
+        }
+
+        [Authorize] 
+        public async Task<IActionResult> Profile()
+        {
+          
+            var user = await userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            return View(user);
         }
 
         public IActionResult Login()

@@ -11,6 +11,21 @@
     </div>
 
     <div class="ra-field">
+        <label class="ra-label" asp-for="Category">Product Category</label>
+        <select asp-for="Category" class="ra-select">
+            <option value="">Select Category</option>
+            @if (ViewBag.Categories != null)
+            {
+                foreach (var cat in ViewBag.Categories)
+                {
+                    <option value="@cat">@cat</option>
+                }
+            }
+        </select>
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.Category)</span>
+    </div>
+
+    <div class="ra-field">
         <label class="ra-label" asp-for="Rating">Rating</label>
         <select asp-for="Rating" class="ra-select">
             <option value="">Select Rating</option>

@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Ra2yak</title>
-    <script type="importmap"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -19,29 +18,50 @@
                 <a class="site-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <span class="brand-dot"></span>Ra2yak
                 </a>
-                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
                     <span></span><span></span><span></span>
                 </button>
-                <div class="nav-links-wrap">
-                    <!-- Left side: main nav links -->
+
+                <div class="nav-links-wrap" style="display: flex; align-items: center; width: 100%;">
+
                     <ul class="nav-links">
                         <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                         <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
                     </ul>
-                    <!-- Right side: login/auth links pushed to the right -->
-                    <ul class="nav-links" style="margin-left: auto;">
-                        <partial name="_LoginPartial" />
-                    </ul>
+
+                    <div style="margin-left: auto; display: flex; align-items: center; gap: 15px;">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Reviews" asp-action="Create" class="btn-primary" style="text-decoration: none;">
+                                Create a Review
+                            </a>
+
+                            <a asp-controller="Account" asp-action="Profile" title="My Profile" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: #f1f5f9; border-radius: 50%; color: #64748b; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.08)'; this.style.color='#2563eb';" onmouseout="this.style.transform='scale(1)'; this.style.color='#64748b';">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </a>
+                        }
+                        else
+                        {
+                            <ul class="nav-links" style="margin: 0;">
+                                <partial name="_LoginPartial" />
+                            </ul>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="page-body">
         <main role="main" class="main-content pb-3">
             @RenderBody()
         </main>
     </div>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <span class="footer-brand">Ra2yak</span>
@@ -51,9 +71,11 @@
             <a asp-area="" asp-controller="Home" asp-action="Privacy" class="footer-link">Privacy Policy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

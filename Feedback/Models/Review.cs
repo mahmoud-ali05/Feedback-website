@@ -16,6 +16,10 @@ namespace Feedback.Models
         [StringLength(100)]
         public string? ProductName { get; set; }
 
+        [Required(ErrorMessage = "Please select a category")]
+        [StringLength(50)]
+        public string? Category { get; set; }
+
         [Required]
         [StringLength(1000)]
         public string? Text { get; set; }

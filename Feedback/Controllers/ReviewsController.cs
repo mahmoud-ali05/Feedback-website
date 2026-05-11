@@ -24,11 +24,32 @@ namespace Feedback.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        // ── Feed / Index page with Search ──
+        public IActionResult Index(string searchString, string categoryFilter)
         {
-            var reviews = await _reviewService.GetAllReviewsAsync();
-            return View("Feed", reviews);
+            var reviews = _context.Reviews
+                                  .Include(r => r.User)
+                                  .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                reviews = reviews.Where(r => r.ProductName.Contains(searchString)
+                                          || r.Text.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(categoryFilter))
+            {
+                reviews = reviews.Where(r => r.Category == categoryFilter);
+            }
+
+            ViewBag.Categories = new List<string> { "Electronics", "Fashion", "Food", "Services", "Books", "Other" };
+
+            ViewData["CurrentFilter"] = searchString;
+            ViewData["CurrentCategory"] = categoryFilter;
+
+            return View("Feed", reviews.ToList());
         }
+
 
         // ── Details page ──
         public async Task<IActionResult> Details(int id)
@@ -92,6 +113,7 @@ namespace Feedback.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.Categories = new List<string> { "Electronics", "Fashion", "Food", "Services", "Books", "Other" };
             return View();
         }
 
@@ -108,6 +130,8 @@ namespace Feedback.Controllers
                 await _reviewService.AddReview(review, Image);
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Categories = new List<string> { "Electronics", "Fashion", "Food", "Services", "Books", "Other" };
             return View(review);
         }
 

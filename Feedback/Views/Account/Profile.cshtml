@@ -1,0 +1,44 @@
+﻿@model UsersApp.Models.Users
+@{
+    ViewData["Title"] = "My Profile";
+
+    var initials = "U";
+    if (!string.IsNullOrEmpty(Model.FullName))
+    {
+        var parts = Model.FullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        initials = parts.Length > 1
+            ? (parts[0][0].ToString() + parts[1][0].ToString()).ToUpper()
+            : parts[0][0].ToString().ToUpper();
+    }
+    else if (!string.IsNullOrEmpty(Model.UserName))
+    {
+        initials = Model.UserName.Substring(0, 1).ToUpper();
+    }
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="profile-card">
+
+                <div class="profile-avatar-big">
+                    @initials
+                </div>
+
+                <h3 class="fw-bold mb-2">@(Model.FullName ?? Model.UserName)</h3>
+                <p class="text-muted mb-4">@Model.Email</p>
+
+                <hr class="mb-4" style="opacity: 0.1;">
+
+                <div class="d-flex justify-content-center mt-3">
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
+                        <button type="submit" class="btn btn-outline-danger" style="border-radius: 8px; font-weight: 500; font-size: 14px; padding: 6px 24px;">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
