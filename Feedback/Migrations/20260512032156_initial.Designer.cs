@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Feedback.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260511051307_AddCategoryToReview")]
-    partial class AddCategoryToReview
+    [Migration("20260512032156_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
