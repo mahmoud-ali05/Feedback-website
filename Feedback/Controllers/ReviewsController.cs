@@ -27,10 +27,7 @@ namespace Feedback.Controllers
         // ── Feed / Index page with Search ──
         public async Task<IActionResult> Index(string searchString, string categoryFilter)
         {
-            var reviews = _context.Reviews
-                                  .Include(r => r.User)
-                                  .Include(r => r.Comments)
-                                  .AsQueryable();
+            var reviews = (await _reviewService.GetAllReviewsAsync()).AsEnumerable();
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -48,7 +45,7 @@ namespace Feedback.Controllers
             ViewData["CurrentFilter"] = searchString;
             ViewData["CurrentCategory"] = categoryFilter;
 
-            var reviewList = await reviews.ToListAsync();
+            var reviewList = reviews.ToList();
 
             // Compute which reviews the current user has already liked
             var currentUser = await _userManager.GetUserAsync(User);

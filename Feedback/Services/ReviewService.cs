@@ -27,7 +27,9 @@ namespace Feedback.Services
             return await _context.Reviews
                             .Include(r => r.Comments).ThenInclude(c => c.User)
                             .Include(r => r.User)
+                            .OrderByDescending(r => r.Date)
                             .ToListAsync();
+
         }
 
         public async Task AddReview(Review review, IFormFile? imageFile)
