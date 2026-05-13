@@ -7,7 +7,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Ra2yak</title>
+    <meta name="description" content="Ra2yak - Share your opinion, read honest reviews." />
+    <title>@(ViewData["Title"] != null ? ViewData["Title"] + " · Ra2yak" : "Ra2yak")</title>
+    <link rel="icon" type="image/svg+xml" href="~/images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -20,28 +22,35 @@
     <header>
         <nav class="site-nav">
             <div class="nav-inner">
+
                 <a class="site-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <span class="brand-dot"></span>Ra2yak
+                    <img src="~/images/logo.svg" alt="Ra2yak" height="36" style="display:block;" />
                 </a>
 
-                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                <button class="nav-toggle" type="button" id="navToggleBtn" aria-label="Toggle navigation">
                     <span></span><span></span><span></span>
                 </button>
 
-                <div class="nav-links-wrap">
+                <div class="nav-links-wrap" id="navLinksWrap">
                     <ul class="nav-links">
-                        <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                        <li>
+                            <a class="nav-link-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Privacy" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
                     </ul>
 
                     <div class="nav-auth">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <a asp-controller="Reviews" asp-action="Create" class="btn-primary nav-create-btn">
-                                Create a Review
+                            <a asp-controller="Reviews" asp-action="Create" class="nav-create-btn">
+                                + Write a Review
                             </a>
 
-                            
+                            @{
                                 string? photoUrl = null;
                                 var userId = LayoutUserManager.GetUserId(User);
                                 if (!string.IsNullOrEmpty(userId))
@@ -52,7 +61,7 @@
                                         photoUrl = layoutUser.ProfilePhotoUrl;
                                     }
                                 }
-                            
+                            }
 
                             <a asp-controller="Account" asp-action="Profile" title="My Profile" class="nav-profile-btn">
                                 @if (photoUrl != null)
@@ -61,7 +70,7 @@
                                 }
                                 else
                                 {
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
@@ -77,6 +86,7 @@
                         }
                     </div>
                 </div>
+
             </div>
         </nav>
     </header>
