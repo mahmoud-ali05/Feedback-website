@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Feedback.Models.ReviewCardViewModel>
+
+<!-- Feed header -->
+<div class="feed-header">
+    <div class="feed-header-text">
+        <h1 class="feed-title">What people are saying</h1>
+        <p class="feed-sub">Honest reviews from the Ra2yak community</p>
+    </div>
+</div>
+
+<form asp-controller="Reviews" asp-action="Index" method="get" class="search-section">
+    <div class="search-container">
+        <div class="input-wrapper main-search">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" class="custom-input"
+                   placeholder="Search by product name or review..." />
+        </div>
+
+        <div class="input-wrapper">
+            <select name="categoryFilter" class="custom-select">
+                <option value="">All Categories</option>
+                @if (ViewBag.Categories != null)
+                {
+                    foreach (var cat in (IEnumerable<string>)ViewBag.Categories)
+                    {
+                        bool isSelected = ViewData["CurrentCategory"]?.ToString() == cat;
+                        <option value="@cat" selected="@(isSelected ? "selected" : null)">@cat</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-primary-action">Search</button>
+            <a asp-action="Index" class="btn-secondary-action">Clear</a>
+        </div>
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <div class="no-results">
+        <div class="no-results-icon">🔍</div>
+        <h3>No reviews found!</h3>
+        <p>We couldn't find what you're looking for. Try a different word or category.</p>
+    </div>
+}
+
+<div class="feed-list">
+    @foreach (var vm in Model)
+    {
+        <partial name="_ReviewCard" model="vm" />
+    }
+</div>

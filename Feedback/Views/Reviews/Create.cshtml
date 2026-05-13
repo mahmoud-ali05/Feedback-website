@@ -1,0 +1,109 @@
+﻿@model Review
+
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="ra-form-wrap">
+
+    <p class="ra-form-title">Write a Review</p>
+    <p class="ra-form-sub">Share your experience with a product</p>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="ProductName">Product Name</label>
+        <input asp-for="ProductName" class="ra-input" placeholder="e.g. Sony WH-1000XM5" />
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.ProductName)</span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Category">Product Category</label>
+        <select asp-for="Category" class="ra-select">
+            <option value="">Select Category</option>
+            @if (ViewBag.Categories != null)
+            {
+                foreach (var cat in ViewBag.Categories)
+                {
+                    <option value="@cat">@cat</option>
+                }
+            }
+        </select>
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.Category)</span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Rating">Rating</label>
+        <select asp-for="Rating" class="ra-select">
+            <option value="">Select Rating</option>
+            <option value="1">1 ★</option>
+            <option value="2">2 ★★</option>
+            <option value="3">3 ★★★</option>
+            <option value="4">4 ★★★★</option>
+            <option value="5">5 ★★★★★</option>
+        </select>
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.Rating)</span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Text">Your Review</label>
+        <textarea asp-for="Text" class="ra-textarea" placeholder="What did you think? Be honest!"></textarea>
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.Text)</span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label">Product Image</label>
+        <label class="ra-file-label" id="fileLabel">
+            <span class="ra-file-icon">🖼</span>
+            <span id="fileLabelText">Upload a photo (optional)</span>
+            <input type="file" name="Image" accept="image/*" id="imageInput" />
+        </label>
+        <div id="uploadStatus" style="font-size:12px; margin-top:5px; color:#10b981;"></div>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="ExternalLink">Product Link</label>
+        <input asp-for="ExternalLink" class="ra-input" placeholder="https://example.com/product" />
+        <span class="ra-error">@Html.ValidationMessageFor(m => m.ExternalLink)</span>
+    </div>
+
+    <hr class="ra-divider" />
+    <button type="submit" class="ra-submit">Submit Review</button>
+
+</form>
+
+<script>
+    const fileInput = document.getElementById('imageInput');
+    const fileLabel = document.getElementById('fileLabel');
+    const fileLabelText = document.getElementById('fileLabelText');
+    const uploadStatus = document.getElementById('uploadStatus');
+
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            // Check if it's an image
+            if (!file.type.startsWith('image/')) {
+                uploadStatus.style.color = '#ef4444';
+                uploadStatus.textContent = '❌ Please select an image file (jpg, png, gif, etc.)';
+                fileLabel.classList.remove('has-file');
+                fileLabelText.textContent = 'Upload a photo (optional)';
+                fileInput.value = ''; // Clear the invalid file
+                return;
+            }
+
+            // Check file size (max 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                uploadStatus.style.color = '#ef4444';
+                uploadStatus.textContent = '❌ File too large! Maximum size is 5MB.';
+                fileLabel.classList.remove('has-file');
+                fileLabelText.textContent = 'Upload a photo (optional)';
+                fileInput.value = '';
+                return;
+            }
+
+            // Valid file - show success message
+            uploadStatus.style.color = '#10b981';
+            uploadStatus.textContent = `✓ ${file.name} selected (${(file.size / 1024).toFixed(1)} KB)`;
+            fileLabel.classList.add('has-file');
+            fileLabelText.textContent = 'Change photo';
+        } else {
+            uploadStatus.textContent = '';
+            fileLabel.classList.remove('has-file');
+            fileLabelText.textContent = 'Upload a photo (optional)';
+        }
+    });
+</script>

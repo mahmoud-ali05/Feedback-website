@@ -1,0 +1,120 @@
+@model Feedback.Models.Review
+@{
+    ViewData["Title"] = "Edit Review";
+}
+
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data" class="ra-form-wrap">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <p class="ra-form-title">Edit Review</p>
+    <p class="ra-form-sub">Update your experience with this product</p>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="ProductName">Product Name</label>
+        <input asp-for="ProductName" class="ra-input" placeholder="e.g. Sony WH-1000XM5" />
+        <span class="ra-error" asp-validation-for="ProductName"></span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Category">Product Category</label>
+        <select asp-for="Category" class="ra-select">
+            <option value="">Select Category</option>
+            @if (ViewBag.Categories != null)
+            {
+                foreach (var cat in (IEnumerable<string>)ViewBag.Categories)
+                {
+                    <option value="@cat">@cat</option>
+                }
+            }
+        </select>
+        <span class="ra-error" asp-validation-for="Category"></span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Rating">Rating</label>
+        <select asp-for="Rating" class="ra-select">
+            <option value="">Select Rating</option>
+            <option value="1">1 ★</option>
+            <option value="2">2 ★★</option>
+            <option value="3">3 ★★★</option>
+            <option value="4">4 ★★★★</option>
+            <option value="5">5 ★★★★★</option>
+        </select>
+        <span class="ra-error" asp-validation-for="Rating"></span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="Text">Your Review</label>
+        <textarea asp-for="Text" class="ra-textarea" placeholder="What did you think? Be honest!"></textarea>
+        <span class="ra-error" asp-validation-for="Text"></span>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label">Product Image</label>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Model.ImageUrl" class="edit-current-img" alt="Current image" />
+            <p class="edit-img-hint">Upload a new image to replace the current one</p>
+        }
+        <label class="ra-file-label" id="fileLabel">
+            <span class="ra-file-icon">🖼</span>
+            <span id="fileLabelText">Upload a photo (optional)</span>
+            <input type="file" name="Image" accept="image/*" id="imageInput" />
+        </label>
+        <div id="uploadStatus" style="font-size:12px; margin-top:5px; color:#10b981;"></div>
+    </div>
+
+    <div class="ra-field">
+        <label class="ra-label" asp-for="ExternalLink">Product Link</label>
+        <input asp-for="ExternalLink" class="ra-input" placeholder="https://example.com/product" />
+        <span class="ra-error" asp-validation-for="ExternalLink"></span>
+    </div>
+
+    <hr class="ra-divider" />
+
+    <div class="edit-form-actions">
+        <a asp-controller="Account" asp-action="Profile" class="btn-cancel-edit">Cancel</a>
+        <button type="submit" class="ra-submit edit-submit-btn">Save Changes</button>
+    </div>
+
+</form>
+
+<script>
+    const fileInput = document.getElementById('imageInput');
+    const fileLabel = document.getElementById('fileLabel');
+    const fileLabelText = document.getElementById('fileLabelText');
+    const uploadStatus = document.getElementById('uploadStatus');
+
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            if (!file.type.startsWith('image/')) {
+                uploadStatus.style.color = '#ef4444';
+                uploadStatus.textContent = '❌ Please select an image file (jpg, png, gif, etc.)';
+                fileLabel.classList.remove('has-file');
+                fileLabelText.textContent = 'Upload a photo (optional)';
+                fileInput.value = '';
+                return;
+            }
+
+            if (file.size > 5 * 1024 * 1024) {
+                uploadStatus.style.color = '#ef4444';
+                uploadStatus.textContent = '❌ File too large! Maximum size is 5MB.';
+                fileLabel.classList.remove('has-file');
+                fileLabelText.textContent = 'Upload a photo (optional)';
+                fileInput.value = '';
+                return;
+            }
+
+            uploadStatus.style.color = '#10b981';
+            uploadStatus.textContent = `✓ ${file.name} selected (${(file.size / 1024).toFixed(1)} KB)`;
+            fileLabel.classList.add('has-file');
+            fileLabelText.textContent = 'Change photo';
+        } else {
+            uploadStatus.textContent = '';
+            fileLabel.classList.remove('has-file');
+            fileLabelText.textContent = 'Upload a photo (optional)';
+        }
+    });
+</script>

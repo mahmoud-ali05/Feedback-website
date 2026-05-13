@@ -1,0 +1,92 @@
+@model Feedback.Models.ReviewCardViewModel
+
+@{
+    var review = Model.Review;
+    var isLiked = Model.IsLikedByCurrentUser;
+    string? catClass = null;
+    if (!string.IsNullOrEmpty(review.Category))
+    {
+        catClass = review.Category.Trim() switch
+        {
+            "Electronics" => "cat-tech",
+            "Fashion"     => "cat-fashion",
+            "Food"        => "cat-food",
+            "Services"    => "cat-services",
+            "Books"       => "cat-books",
+            _             => "cat-other"
+        };
+    }
+}
+
+<a href="/Reviews/Details/@review.Id" class="feed-card-link">
+    <div class="feed-card">
+
+        <!-- Image -->
+        <div class="feed-img-wrap">
+            @if (!string.IsNullOrEmpty(review.ImageUrl))
+            {
+                <img src="@review.ImageUrl" class="feed-img" alt="@review.ProductName" />
+            }
+            else
+            {
+                <div class="feed-img-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                </div>
+            }
+            @if (catClass != null)
+            {
+                <span class="category-badge @catClass card-cat-badge">@review.Category</span>
+            }
+        </div>
+
+        <!-- Body -->
+        <div class="feed-card-body">
+            <div class="feed-card-title-row">
+                <h5 class="feed-card-title">@review.ProductName</h5>
+                <div class="card-rating">
+                    <span class="card-star">★</span>
+                    <span class="card-rating-num">@review.Rating</span>
+                </div>
+            </div>
+
+            <div class="feed-card-footer">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">
+                        @{
+                            var name = review.User?.FullName ?? review.User?.UserName ?? "A";
+                            var initials = string.Concat(name.Split(' ').Take(2).Select(w => w[0])).ToUpper();
+                        }
+                        @if (!string.IsNullOrEmpty(review.User?.ProfilePhotoUrl))
+                        {
+                            <img src="@review.User.ProfilePhotoUrl" alt="@name" class="reviewer-photo" />
+                        }
+                        else
+                        {
+                            <span>@initials</span>
+                        }
+                    </div>
+                    <div class="reviewer-info">
+                        <span class="reviewer-name">@(review.User?.FullName ?? review.User?.UserName ?? "Anonymous")</span>
+                        <span class="reviewer-date">@review.Date.ToString("MMM d, yyyy")</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="/Reviews/Details/@review.Id#comments"
+                       class="comment-btn"
+                       aria-label="Comment">
+                        <span class="comment-icon">💬</span>
+                        <span class="comment-count">@(review.Comments?.Count ?? 0)</span>
+                    </a>
+                    <button class="like-btn @(isLiked ? "liked" : "")"
+                            data-id="@review.Id"
+                            data-liked="@(isLiked ? "true" : "false")"
+                            aria-label="Like">
+                        <span class="like-heart">@(isLiked ? "♥" : "♡")</span>
+                        <span class="like-count">@review.Likes</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</a>

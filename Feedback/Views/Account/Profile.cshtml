@@ -1,0 +1,275 @@
+@model Feedback.ViewModel.ProfileViewModel
+@{
+    ViewData["Title"] = "My Profile";
+    var user = Model.User;
+
+    var nameParts = (user.FullName ?? user.UserName ?? "U").Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    var initials = nameParts.Length > 1
+        ? (nameParts[0][0].ToString() + nameParts[1][0].ToString()).ToUpper()
+        : nameParts[0][0].ToString().ToUpper();
+}
+
+<!-- Delete confirm modal -->
+<div class="modal-overlay" id="deleteModal">
+    <div class="modal-box">
+        <h4>Delete this review?</h4>
+        <p>This can't be undone. The review and its image will be permanently removed.</p>
+        <div class="modal-actions">
+            <button class="modal-cancel" onclick="closeDeleteModal()">Cancel</button>
+            <form class="modal-confirm-form" id="deleteForm" method="post">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="modal-confirm">Yes, delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="profile-page">
+
+    <!-- ── Top card ── -->
+    <div class="profile-top">
+
+        <!-- Avatar + upload -->
+        <form asp-controller="Account" asp-action="UpdateProfile" method="post" enctype="multipart/form-data" id="avatarForm">
+            <input type="hidden" name="bio" value="@user.Bio" />
+            <div class="profile-avatar-wrap">
+                @if (!string.IsNullOrEmpty(user.ProfilePhotoUrl))
+                {
+                    <img src="@user.ProfilePhotoUrl" class="profile-avatar-img" alt="Profile photo" />
+                }
+                else
+                {
+                    <div class="profile-avatar-initials">@initials</div>
+                }
+                <div class="avatar-upload-btn" title="Change photo" onclick="document.getElementById('avatarInput').click()">✏</div>
+                <input type="file" name="photo" id="avatarInput" accept="image/*"
+                       onchange="document.getElementById('avatarForm').submit()" />
+            </div>
+        </form>
+        @if (!string.IsNullOrEmpty(user.ProfilePhotoUrl))
+        {
+            <form asp-controller="Account" asp-action="DeleteProfilePhoto" method="post" style="text-align:center;margin-top:6px;">
+                @Html.AntiForgeryToken()
+                <button type="submit" style="background:none;border:none;font-size:11px;color:#ef4444;cursor:pointer;font-weight:600;padding:0;text-decoration:underline;text-underline-offset:2px;">Remove photo</button>
+            </form>
+        }
+
+        <!-- Info -->
+        <div class="profile-info">
+            <div class="profile-name">@(user.FullName ?? user.UserName)</div>
+            <div class="profile-email">@user.Email</div>
+
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-num">@Model.MyReviews.Count</span>
+                    <span class="stat-label">Reviews</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">@Model.LikedReviews.Count</span>
+                    <span class="stat-label">Liked</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">@Model.MyComments.Count</span>
+                    <span class="stat-label">Comments</span>
+                </div>
+            </div>
+
+            <!-- Bio display -->
+            <div id="bioDisplay">
+                @if (!string.IsNullOrWhiteSpace(user.Bio))
+                {
+                    <p class="profile-bio-display">@user.Bio</p>
+                }
+                else
+                {
+                    <p class="profile-bio-display profile-bio-placeholder">No bio yet.</p>
+                }
+                <button class="btn-edit-bio" onclick="toggleBioEdit()">✏ Edit bio</button>
+            </div>
+
+            <!-- Bio edit form -->
+            <form asp-controller="Account" asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+                <div class="bio-edit-form" id="bioEditForm">
+                    <textarea name="bio" class="bio-textarea" placeholder="Tell the community a bit about yourself...">@user.Bio</textarea>
+                    <div class="bio-actions">
+                        <button type="submit" class="btn-bio-save">Save</button>
+                        <button type="button" class="btn-bio-cancel" onclick="toggleBioEdit()">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Logout -->
+        <div class="profile-actions">
+            <form asp-controller="Account" asp-action="Logout" method="post">
+                <button type="submit" class="btn-logout">Logout</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- ── Tabs ── -->
+    <div class="profile-tabs">
+        <button class="tab-btn active" onclick="switchTab('reviews', this)">
+            My Reviews <span class="tab-badge">@Model.MyReviews.Count</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('liked', this)">
+            Liked <span class="tab-badge">@Model.LikedReviews.Count</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('comments', this)">
+            Comments <span class="tab-badge">@Model.MyComments.Count</span>
+        </button>
+    </div>
+
+    <!-- ── My Reviews ── -->
+    <div class="tab-panel active" id="tab-reviews">
+        @if (!Model.MyReviews.Any())
+        {
+            <div class="empty-state">
+                <span class="empty-icon">📝</span>
+                <h4>No reviews yet</h4>
+                <p>Start by reviewing a product you love or hate!</p>
+            </div>
+        }
+        else
+        {
+            <div class="my-reviews-grid">
+                @foreach (var r in Model.MyReviews)
+                {
+                    <div class="my-review-card">
+                        @if (!string.IsNullOrEmpty(r.ImageUrl))
+                        {
+                            <img src="@r.ImageUrl" class="my-review-img" alt="@r.ProductName" />
+                        }
+                        else
+                        {
+                            <div class="my-review-img-placeholder">🖼</div>
+                        }
+                        <div class="my-review-body">
+                            <div class="my-review-header">
+                                <h5 class="my-review-title">@r.ProductName</h5>
+                                <div class="my-rating-chip">
+                                    <span class="chip-star">★</span>
+                                    <span class="chip-num">@r.Rating</span>
+                                </div>
+                            </div>
+                            <div class="my-review-footer">
+                                <span class="my-review-meta">
+                                    @r.Date.ToString("MMM d, yyyy") · @r.Likes ♥ · @(r.Comments?.Count ?? 0) 💬
+                                </span>
+                                <div class="my-review-actions">
+                                    <a href="/Reviews/Edit/@r.Id" class="btn-edit-review">Edit</a>
+                                    <button type="button" class="btn-delete-review" onclick="openDeleteModal(@r.Id)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- ── Liked ── -->
+    <div class="tab-panel" id="tab-liked">
+        @if (!Model.LikedReviews.Any())
+        {
+            <div class="empty-state">
+                <span class="empty-icon">♡</span>
+                <h4>No liked reviews yet</h4>
+                <p>Heart a review and it'll show up here.</p>
+            </div>
+        }
+        else
+        {
+            <div class="activity-list">
+                @foreach (var r in Model.LikedReviews)
+                {
+                    <a href="/Reviews/Details/@r.Id" class="activity-item">
+                        @if (!string.IsNullOrEmpty(r.ImageUrl))
+                        {
+                            <img src="@r.ImageUrl" class="activity-thumb" alt="@r.ProductName" />
+                        }
+                        else
+                        {
+                            <div class="activity-thumb-placeholder">🖼</div>
+                        }
+                        <div class="activity-body">
+                            <div class="activity-product">@r.ProductName</div>
+                            <div class="activity-sub">by @(r.User?.FullName ?? r.User?.UserName ?? "Anonymous") · @r.Likes ♥</div>
+                        </div>
+                        <span class="activity-arrow">›</span>
+                    </a>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- ── Comments ── -->
+    <div class="tab-panel" id="tab-comments">
+        @if (!Model.MyComments.Any())
+        {
+            <div class="empty-state">
+                <span class="empty-icon">💬</span>
+                <h4>No comments yet</h4>
+                <p>Join the conversation on a review.</p>
+            </div>
+        }
+        else
+        {
+            <div class="activity-list">
+                @foreach (var c in Model.MyComments)
+                {
+                    <a href="/Reviews/Details/@c.ReviewId#comments" class="activity-item">
+                        @if (!string.IsNullOrEmpty(c.Review?.ImageUrl))
+                        {
+                            <img src="@c.Review.ImageUrl" class="activity-thumb" alt="@c.Review.ProductName" />
+                        }
+                        else
+                        {
+                            <div class="activity-thumb-placeholder">🖼</div>
+                        }
+                        <div class="activity-body">
+                            <div class="activity-product">@(c.Review?.ProductName ?? "Review")</div>
+                            <div class="activity-sub">"@c.Text"</div>
+                        </div>
+                        <form asp-controller="Account" asp-action="DeleteComment" asp-route-id="@c.Id" method="post" onclick="event.preventDefault(); event.stopPropagation(); if(confirm('Delete this comment?')) this.submit();">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" style="background:#fef2f2;border:none;color:#dc2626;border-radius:8px;padding:5px 10px;font-size:12px;font-weight:600;cursor:pointer;flex-shrink:0;">Delete</button>
+                        </form>
+                        <span class="activity-arrow">›</span>
+                    </a>
+                }
+            </div>
+        }
+    </div>
+
+</div>
+
+<script>
+    function switchTab(name, btn) {
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('tab-' + name).classList.add('active');
+        btn.classList.add('active');
+    }
+
+    function toggleBioEdit() {
+        const form = document.getElementById('bioEditForm');
+        const display = document.getElementById('bioDisplay');
+        form.classList.toggle('open');
+        display.style.display = form.classList.contains('open') ? 'none' : '';
+    }
+
+    function openDeleteModal(id) {
+        document.getElementById('deleteForm').action = '/Reviews/Delete/' + id;
+        document.getElementById('deleteModal').classList.add('open');
+    }
+
+    function closeDeleteModal() {
+        document.getElementById('deleteModal').classList.remove('open');
+    }
+
+    document.getElementById('deleteModal').addEventListener('click', function (e) {
+        if (e.target === this) closeDeleteModal();
+    });
+</script>

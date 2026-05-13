@@ -1,0 +1,14 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using UsersApp.Models
+@inject SignInManager<Users> SignInManager;
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li><a class="nav-link-item" asp-controller="Account" asp-action="Logout">Logout</a></li>
+    <li><a class="nav-link-item" asp-controller="Reviews" asp-action="Create">Create a Review</a></li>
+}
+else
+{
+    <li><a class="nav-link-item" asp-controller="Account" asp-action="Login">Login</a></li>
+    <li><a class="nav-link-item" asp-controller="Account" asp-action="Register">Register</a></li>
+}

@@ -1,0 +1,106 @@
+@using Microsoft.AspNetCore.Identity
+@using UsersApp.Models
+@inject UserManager<Users> LayoutUserManager
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ra2yak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Testing.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <a class="site-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="brand-dot"></span>Ra2yak
+                </a>
+
+                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <div class="nav-links-wrap">
+                    <ul class="nav-links">
+                        <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a class="nav-link-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                    </ul>
+
+                    <div class="nav-auth">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Reviews" asp-action="Create" class="btn-primary nav-create-btn">
+                                Create a Review
+                            </a>
+
+                            
+                                string? photoUrl = null;
+                                var userId = LayoutUserManager.GetUserId(User);
+                                if (!string.IsNullOrEmpty(userId))
+                                {
+                                    var layoutUser = await LayoutUserManager.FindByIdAsync(userId);
+                                    if (layoutUser != null && !string.IsNullOrEmpty(layoutUser.ProfilePhotoUrl))
+                                    {
+                                        photoUrl = layoutUser.ProfilePhotoUrl;
+                                    }
+                                }
+                            
+
+                            <a asp-controller="Account" asp-action="Profile" title="My Profile" class="nav-profile-btn">
+                                @if (photoUrl != null)
+                                {
+                                    <img src="@photoUrl" alt="Profile" class="nav-profile-photo" />
+                                }
+                                else
+                                {
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                }
+                            </a>
+                        }
+                        else
+                        {
+                            <ul class="nav-links">
+                                <partial name="_LoginPartial" />
+                            </ul>
+                        }
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-body">
+        <main role="main" class="main-content pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Ra2yak</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-copy">&copy; 2026</span>
+            <span class="footer-sep">·</span>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy" class="footer-link">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

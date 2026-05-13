@@ -1,0 +1,155 @@
+@model Feedback.Models.ReviewDetailViewModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<UsersApp.Models.Users> SignInManager
+
+@{
+    ViewData["Title"] = Model.Review.ProductName;
+    var review = Model.Review;
+    var name = review.User?.FullName ?? review.User?.UserName ?? "Anonymous";
+    var initials = string.Concat(name.Split(' ').Take(2).Select(w => w[0])).ToUpper();
+}
+
+<div class="detail-wrap">
+
+    <a href="@Url.Action("Index", "Reviews")" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 12L6 8l4-4" />
+        </svg>
+        Back to reviews
+    </a>
+
+    <!-- Hero card -->
+    <div class="detail-card">
+        <div class="detail-img-wrap">
+            @if (!string.IsNullOrEmpty(review.ImageUrl))
+            {
+                <img src="@review.ImageUrl" class="detail-img" alt="@review.ProductName" />
+            }
+            else
+            {
+                <div class="detail-img-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <rect x="3" y="3" width="18" height="18" rx="3" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <path d="M21 15l-5-5L5 21" />
+                    </svg>
+                </div>
+            }
+        </div>
+
+        <div class="detail-body">
+            <div class="detail-meta">
+                <div class="detail-stars" aria-label="Rating: @review.Rating out of 5">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <span class="@(i <= review.Rating ? "star filled" : "star")">★</span>
+                    }
+                </div>
+                <span class="detail-date">@review.Date.ToString("MMMM d, yyyy")</span>
+            </div>
+
+            <h1 class="detail-title">@review.ProductName</h1>
+            <p class="detail-text">@review.Text</p>
+
+            <div class="detail-footer">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">
+                        @if (!string.IsNullOrEmpty(review.User?.ProfilePhotoUrl))
+                        {
+                            <img src="@review.User.ProfilePhotoUrl" class="reviewer-photo" alt="@name" />
+                        }
+                        else
+                        {
+                            @initials
+                        }
+                    </div>
+                    <div>
+                        <div class="reviewer-name">@name</div>
+                        <div class="reviewer-date">@review.Date.ToString("MMM d, yyyy")</div>
+                    </div>
+                </div>
+                <div class="detail-actions">
+                    <button class="like-btn @(Model.IsLikedByCurrentUser ? "liked" : "")"
+                            data-id="@review.Id"
+                            data-liked="@(Model.IsLikedByCurrentUser ? "true" : "false")"
+                            aria-label="Like this review">
+                        <span class="like-heart">@(Model.IsLikedByCurrentUser ? "♥" : "♡")</span>
+                        <span class="like-count">@review.Likes</span>
+                    </button>
+                    @if (!string.IsNullOrEmpty(review.ExternalLink))
+                    {
+                        <a href="@review.ExternalLink" class="detail-link" target="_blank" rel="noopener noreferrer">
+                            View Product
+                            <svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M2 8L8 2M4 2h4v4" />
+                            </svg>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments section -->
+    <div class="comments-section" id="comments">
+        <h2 class="comments-title">
+            Comments
+            <span class="comments-count">@review.Comments.Count</span>
+        </h2>
+
+        <div class="comment-form">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <form asp-action="AddComment" asp-controller="Reviews" method="post">
+                    <input type="hidden" name="ReviewId" value="@review.Id" />
+                    <textarea name="Text"
+                              placeholder="Share your thoughts about this review..."
+                              maxlength="500">@Model.NewComment.Text</textarea>
+                    <span asp-validation-for="NewComment.Text" class="text-danger comment-error"></span>
+                    <br />
+                    <button type="submit" class="btn-submit">Post Comment</button>
+                </form>
+            }
+            else
+            {
+                <div class="login-prompt">
+                    <a asp-controller="Account" asp-action="Login">Log in</a> to leave a comment.
+                </div>
+            }
+        </div>
+
+        <div class="comment-list">
+            @if (!review.Comments.Any())
+            {
+                <div class="no-comments">No comments yet — be the first!</div>
+            }
+            else
+            {
+                @foreach (var comment in review.Comments.OrderByDescending(c => c.Id))
+                {
+                    var cName = comment.User?.FullName ?? comment.User?.UserName ?? "Anonymous";
+                    var cInitials = string.Concat(cName.Split(' ').Take(2).Select(w => w[0])).ToUpper();
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            @if (!string.IsNullOrEmpty(comment.User?.ProfilePhotoUrl))
+                            {
+                                <img src="@comment.User.ProfilePhotoUrl" class="reviewer-photo" alt="@cName" />
+                            }
+                            else
+                            {
+                                @cInitials
+                            }
+                        </div>
+                        <div class="comment-bubble">
+                            <div class="comment-header">
+                                <span class="comment-author">@cName</span>
+                            </div>
+                            <p class="comment-text">@comment.Text</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+</div>
