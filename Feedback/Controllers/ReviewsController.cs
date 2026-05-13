@@ -23,8 +23,7 @@ namespace Feedback.Controllers
             _userManager = userManager;
             _context = context;
         }
-
-        // ── Feed / Index page with Search ──
+        
         public async Task<IActionResult> Index(string searchString, string categoryFilter)
         {
             var reviews = (await _reviewService.GetAllReviewsAsync()).AsEnumerable();
@@ -68,7 +67,6 @@ namespace Feedback.Controllers
         }
 
 
-        // ── Details page ──
         public async Task<IActionResult> Details(int id)
         {
             var review = await _context.Reviews
@@ -97,7 +95,8 @@ namespace Feedback.Controllers
             return View(vm);
         }
 
-        // ── Add comment ──
+        //Mostafa End
+
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> AddComment(CommentViewModel vm)
@@ -175,7 +174,6 @@ namespace Feedback.Controllers
             return Json(new { likes = newLikes, liked = liked });
         }
 
-        // ── Edit ──
         [Authorize]
         public async Task<IActionResult> Edit(int id)
         {

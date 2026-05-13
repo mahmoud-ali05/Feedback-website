@@ -1,4 +1,4 @@
-﻿namespace Feedback.Models   // ⚠️ use YOUR project name
+﻿namespace Feedback.Models
 {
     public class ErrorViewModel
     {

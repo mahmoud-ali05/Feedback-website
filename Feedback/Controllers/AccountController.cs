@@ -122,7 +122,10 @@ namespace UsersApp.Controllers
 
             return RedirectToAction(nameof(Profile));
         }
+        // Hassan End
 
+
+        // Atef Start
         public IActionResult Login()
         {
             return View();
@@ -200,7 +203,7 @@ namespace UsersApp.Controllers
 
                 if (user == null)
                 {
-                    ModelState.AddModelError("", "Something is wrong!");
+                    ModelState.AddModelError("", "Email is Not Found");
                     return View(model);
                 }
                 else
