@@ -30,8 +30,8 @@ namespace Feedback.Controllers
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                reviews = reviews.Where(r => r.ProductName.Contains(searchString)
-                                          || r.Text.Contains(searchString));
+                searchString = searchString.ToLower();
+                reviews = reviews.Where(r => r.ProductName.ToLower().Contains(searchString) || r.Text.ToLower().Contains(searchString));
             }
 
             if (!string.IsNullOrEmpty(categoryFilter))
