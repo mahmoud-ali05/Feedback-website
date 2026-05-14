@@ -73,6 +73,18 @@ namespace UsersApp.Controllers
 
             if (photo != null && photo.Length > 0)
             {
+                if (!string.IsNullOrEmpty(user.ProfilePhotoUrl))
+                {
+                    var oldImagePath = Path.Combine(
+                        _env.WebRootPath,
+                        user.ProfilePhotoUrl.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString())
+                    );
+
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
                 var folder = Path.Combine(_env.WebRootPath, "uploads", "avatars");
                 Directory.CreateDirectory(folder);
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);

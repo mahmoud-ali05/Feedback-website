@@ -61,6 +61,18 @@ namespace Feedback.Services
         {
             if (imageFile != null && imageFile.Length > 0)
             {
+                if (!string.IsNullOrEmpty(review.ImageUrl))
+                {
+                    var oldImagePath = Path.Combine(
+                        _env.WebRootPath,
+                        review.ImageUrl.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString())
+                    );
+
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
                 var uploadsFolder = Path.Combine(_env.WebRootPath, "uploads", "reviews");
                 Directory.CreateDirectory(uploadsFolder);
                 var uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
