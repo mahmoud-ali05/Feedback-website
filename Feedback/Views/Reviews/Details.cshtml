@@ -101,8 +101,8 @@
             @if (SignInManager.IsSignedIn(User))
             {
                 <form asp-action="AddComment" asp-controller="Reviews" method="post">
-                    <input type="hidden" name="ReviewId" value="@review.Id" />
-                    <textarea name="Text"
+                    <input type="hidden" name="NewComment.ReviewId" value="@review.Id" />
+                    <textarea name="NewComment.Text"
                               placeholder="Share your thoughts about this review..."
                               maxlength="500">@Model.NewComment.Text</textarea>
                     <span asp-validation-for="NewComment.Text" class="text-danger comment-error"></span>

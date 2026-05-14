@@ -99,7 +99,7 @@ namespace Feedback.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> AddComment(CommentViewModel vm)
+        public async Task<IActionResult> AddComment(CommentViewModel NewComment)
         {
             if (!ModelState.IsValid)
             {
@@ -108,32 +108,32 @@ namespace Feedback.Controllers
                     .Include(r => r.User)
                     .Include(r => r.Comments)
                         .ThenInclude(c => c.User)
-                    .FirstOrDefaultAsync(r => r.Id == vm.ReviewId);
+                    .FirstOrDefaultAsync(r => r.Id == NewComment.ReviewId);
 
                 if (review == null) return NotFound();
 
-                var detailVm = new ReviewDetailViewModel
+                var detailNewComment = new ReviewDetailViewModel
                 {
                     Review = review,
-                    NewComment = vm
+                    NewComment = NewComment
                 };
 
-                return View("Details", detailVm);
+                return View("Details", detailNewComment);
             }
 
             var user = await _userManager.GetUserAsync(User);
 
             var comment = new Comment
             {
-                Text = vm.Text,
-                ReviewId = vm.ReviewId,
+                Text = NewComment.Text,
+                ReviewId = NewComment.ReviewId,
                 UserId = user?.Id
             };
 
             _context.Comments.Add(comment);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Details", new { id = vm.ReviewId });
+            return RedirectToAction("Details", new { id = NewComment.ReviewId });
         }
 
         public IActionResult Create()
@@ -143,6 +143,7 @@ namespace Feedback.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create(Review review, IFormFile? Image)
         {
             if (ModelState.IsValid)
@@ -161,7 +162,6 @@ namespace Feedback.Controllers
         }
 
         [HttpPost]
-        [IgnoreAntiforgeryToken]
         public async Task<IActionResult> Like(int id)
         {
             var user = await _userManager.GetUserAsync(User);
